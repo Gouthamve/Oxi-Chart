@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YOLO</title>
+</head>
+<body>
+Hey! This is a HTML file.
+</body>
+
+<script>
+    var webSocket = new WebSocket("ws://" + location.hostname + ":" + location.port + "/socket");
+    webSocket.onmessage = function (msg) { alert(msg.data); };
+    webSocket.onclose = function () { alert("WebSocket connection closed") };
+</script>
+</html>
